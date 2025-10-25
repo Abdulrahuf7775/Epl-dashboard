@@ -1,0 +1,55 @@
+======================================================================
+PREMIER LEAGUE 2023/24 - DATA DICTIONARY
+======================================================================
+
+Dataset: premier_league_cleaned.csv
+Rows: 496
+Columns: 30
+Date Cleaned: 2025-10-21 19:18:33
+
+======================================================================
+COLUMN DESCRIPTIONS
+======================================================================
+
+Player                    → Player name
+Nation                    → Player nationality
+Team                      → Club/Team name
+Pos                       → Position(s) - may include multiple
+Primary_Pos               → Primary position (DF, MF, FW, GK)
+Age                       → Player age
+MP                        → Matches played (appearances)
+Starts                    → Matches started
+90s                       → 90-minute match equivalents
+Gls                       → Goals scored
+Ast                       → Assists
+G+A                       → Goals + Assists combined
+xG                        → Expected Goals
+xAG                       → Expected Assists
+npxG                      → Non-Penalty Expected Goals
+npxG+xAG                  → Non-Penalty xG + xAG (RECALCULATED)
+PrgC                      → Progressive Carries
+PrgP                      → Progressive Passes
+CrdY                      → Yellow Cards
+CrdR                      → Red Cards
+Gls_90                    → Goals per 90 minutes
+Ast_90                    → Assists per 90 minutes
+xG_90                     → Expected Goals per 90 minutes
+xAG_90                    → Expected Assists per 90 minutes
+Contributions_90          → Goals + Assists per 90 (NEW)
+xContributions_90         → xG + xAG per 90 (NEW)
+Performance_vs_xG         → Actual Goals - Expected Goals (NEW)
+Performance_vs_xAG        → Actual Assists - Expected Assists (NEW)
+Minutes_per_Goal          → Minutes played per goal scored (NEW)
+Minutes_per_Assist        → Minutes played per assist (NEW)
+
+======================================================================
+CLEANING NOTES
+======================================================================
+
+1. Removed 84 players with less than 1 full match (90s < 1.0)
+2. Recalculated npxG+xAG to fix 98 inconsistent values
+3. Created Primary_Pos column for simplified position analysis
+4. Added 6 calculated columns for advanced analysis
+5. Kept 7 players who moved between teams (same name, different teams)
+6. Retained all accented characters in player names (correct spellings)
+7. Final dataset: 496 players across 20 Premier League teams
